@@ -1,0 +1,87 @@
+[
+    {
+        "id": 1,
+        "name": "Homer",
+        "image": "./Images/homer.jpg",
+        "sortOrder": 1,
+        "wasSelected": false
+    },
+    {
+        "id": 2,
+        "name": "Marge",
+        "image": "./Images/marge.jpeg",
+        "sortOrder": 2,
+        "wasSelected": false
+    },
+    {
+        "id": 3,
+        "name": "Bart",
+        "image": "./Images/bart.png",
+        "sortOrder": 3,
+        "wasSelected": false
+    },
+    {
+        "id": 4,
+        "name": "Lisa",
+        "image": "./Images/lisa.jpeg",
+        "sortOrder": 4,
+        "wasSelected": false
+    },
+    {
+        "id": 5,
+        "name": "Maggie",
+        "image": "./Images/maggie.jpeg",
+        "sortOrder": 5,
+        "wasSelected": false
+    },
+    {
+        "id": 6,
+        "name": "Flanders",
+        "image": "./Images/flanders.jpeg",
+        "sortOrder": 6,
+        "wasSelected": false
+    },
+    {
+        "id": 7,
+        "name": "Milhouse",
+        "image": "./Images/milhouse.jpeg",
+        "sortOrder": 7,
+        "wasSelected": false
+    },
+    {
+        "id": 8,
+        "name": "Ralph",
+        "image": "./Images/ralph.png",
+        "sortOrder": 8,
+        "wasSelected": false
+    },
+    {
+        "id": 9,
+        "name": "Lenny",
+        "image": "./Images/lenny.jpeg",
+        "sortOrder": 9,
+        "wasSelected": false
+    },
+    {
+        "id": 10,
+        "name": "Abe",
+        "image": "./Images/grandpa.png",
+        "sortOrder": 10,
+        "wasSelected": false
+    },
+    {
+        "id": 11,
+        "name": "Ms. Crabapple",
+        "image": "./Images/mscrabapple.jpeg",
+        "sortOrder": 11,
+        "wasSelected": false
+    }
+    ,
+    {
+        "id": 12,
+        "name": "Side Show Mel",
+        "image": "./Images/sideshowmel.jpeg",
+        "sortOrder": 12,
+        "wasSelected": false
+    }
+]
