@@ -1,5 +1,5 @@
 import React from "react";
-//import "./CharacterCard.css";
+import "./CharacterCard.css";
 
 const CharacterCard = props => (
   <div className="card" onClick={() => props.testSelected(props.id)}>

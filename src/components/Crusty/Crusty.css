@@ -1,0 +1,16 @@
+.crusty {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.instructions {
+    display: flex;
+    justify-content:center;
+    align-content:center;
+    flex-direction:column;
+}
+
+.instText {
+    font-style: "Marck Script", cursive;
+    font-size: 30px;
+}
