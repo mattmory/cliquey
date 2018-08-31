@@ -3,19 +3,9 @@
     src: url("../Fonts/akbar.ttf") format('truetype'); /*URL to font*/
 }
 
-.crusty {
-    width: 100%;
-    margin: 0 auto;
-}
 
-.instructions {
-    display: flex;
-    justify-content:center;
-    align-content:center;
-    flex-direction:column;
-}
 
-.instText {
+.title {
     font-family: "Simpsons";
     font-size: 30px;
 }
