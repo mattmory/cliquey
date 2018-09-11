@@ -52,9 +52,14 @@ class App extends Component {
       curS = 0;
     }
 
-    //Check to see if the game has been won
-    if(curS === 2)
+    //Check to see if the game has been won, reset the game and display a modal
+    if(curS === 12)
     {
+      curS = 0;
+      highS = 0;
+      for (let i = 0; i < chars.length; i++) {
+        chars[i].wasSelected = false;
+      }
       this.setState({modal: true})
     }
 
