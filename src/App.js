@@ -1,9 +1,11 @@
 import React, { Component } from "react";
+import { Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import CharacterCard from "./components/CharacterCard";
 import Crusty from "./components/Crusty";
 import ScoreBar from "./components/ScoreBar";
 import characters from "./characters.json";
-import Modal from "./components/Modal"
+
+
 import "./App.css";
 
 class App extends Component {
@@ -14,12 +16,14 @@ class App extends Component {
       characters,
       highScore: 0,
       currentScore: 0,
-      isOpen: false
+      shakeDiv: false,
+      modal: false
     };
   }
 
   testSelected = id => {
     // Filter this.state.friends for friends with an id not equal to the id being removed
+    let shakeBool = false;
     let selectedCharacterId;
 
     let chars = this.state.characters;
@@ -39,16 +43,22 @@ class App extends Component {
       chars[selectedCharacterId].wasSelected = true;
     }
     else {
-      //pick was bad, reset the game
+      //pick was bad, reset the game and shake the div
       for (let i = 0; i < chars.length; i++) {
         chars[i].wasSelected = false;
+
       }
+      shakeBool = true;
       curS = 0;
     }
 
-    if (curS === 2) {
-      this.setState({ isOpen: true })
+    //Check to see if the game has been won
+    if(curS === 2)
+    {
+      this.setState({modal: true})
     }
+
+
 
 
     if (curS > highS) {
@@ -64,22 +74,25 @@ class App extends Component {
     this.setState({
       characters: chars,
       highScore: highS,
-      currentScore: curS
+      currentScore: curS,
+      shakeDiv: shakeBool
     });
   };
 
-  toggleModal = () => {
-     this.setState({
-       isOpen: false
-     });
+
+  closeModal = () => {
+    this.setState({
+      modal: false
+    });
   }
+
 
   render() {
     return (
       <div>
         <ScoreBar currentScore={this.state.currentScore} highScore={this.state.highScore} />
         <Crusty />
-        <div className="divChars">
+        <div className={this.state.shakeDiv ? "divChars incorrect" : "divChars"}>
           <div className="row">
             {this.state.characters.map(character => (
               <div className="col-md-3 col-pad">
@@ -93,10 +106,13 @@ class App extends Component {
               </div>
             ))}
           </div>
-          <Modal show={this.state.isOpen}
-          onClose={this.toggleModal}>
-        </Modal>
         </div>
+        <Modal isOpen={this.state.modal}>
+          <ModalBody><img src="./Images/krusty-win-angry.png" alt="Krusty Says"/><br/>
+            <span className="modalText">You win kid. Here's an expired coupon for a Krustyburger.</span>
+            <button onClick={this.closeModal} class="button float-right">Ok</button>
+            </ModalBody>
+        </Modal>
       </div>
     );
   }

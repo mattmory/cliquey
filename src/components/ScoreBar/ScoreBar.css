@@ -2,10 +2,16 @@
     font-family: "Simpsons"; /*a name to be used later*/
     src: url("../Fonts/akbar.ttf") format('truetype'); /*URL to font*/
 }
-
-
+.navbar-brand {
+  text-align: center;
+}
 
 .title {
     font-family: "Simpsons";
     font-size: 30px;
+    color: #ffffff;
+}
+
+a, a:link, a:visited, a:hover, a:active {
+  color: #FFFFFF;
 }
